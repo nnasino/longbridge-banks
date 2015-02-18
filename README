@@ -1,0 +1,14 @@
+this is a sample project simulating a banking software that can handle simple
+credit and debit transactions.
+
+currently there are four tables 
+gam - general account maintenance
+gtd - general transaction details
+gcm - general customer maintenance
+gum - general user maintenance
+
+The program currently has just three functions:
+TM - Transaction Maintenance
+UM - User Maintenance
+CM - Customer Maintenance
+TD - View Transaction Details
