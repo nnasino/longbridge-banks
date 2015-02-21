@@ -7,3 +7,9 @@ GET     /                           controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET 	/tm							controllers.ProductMenus.tm()
+GET 	/td							controllers.ProductMenus.td()
+GET 	/um							controllers.ProductMenus.um()
+GET 	/cm							controllers.ProductMenus.cm()
+

@@ -1,0 +1,88 @@
+@(username: String)
+
+@import helper._
+
+@main("Customer Maintenance", username){
+	
+	<form>
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1">
+				<h3>Transaction Details</h3>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="funccode">Function Code<span style="color:red">*</span></label>
+	                <select class="form-control" name="funcCode" value="A">
+	                	<option value="S">View Single Transaction</optioin>
+	                	<option value="A">View All Transactions</option>
+	                </select>
+	            </div>
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="tranid">Transaction Id</label>
+	                <input class="form-control" type="number" name="bvn" required maxlength="20"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<div class="form-group">
+	                <table id="example" class="table table-striped" cellspacing="0" width="100%">
+				        <thead>
+				            <tr>
+				                <th>First Name</th>
+				                <th>Last Name</th>
+				                <th>Middle Name</th>
+				                <th>Department</th>
+				                <th>Faculty</th>
+				                <th>Sex</th>
+				            </tr>
+				        </thead>
+				        <tfoot>
+				            <tr>
+				                <th>First Name</th>
+				                <th>Last Name</th>
+				                <th>Middle Name</th>
+				                <th>Department</th>
+				                <th>Faculty</th>
+				                <th>Sex</th>
+				            </tr>
+				        </tfoot>
+				        <tbody>
+				        <tr>
+				            <td>Raguvanj</td>
+				            <td>Hilton</td>
+				            <td>Dennis</td>
+				            <td>Computer Science</td>
+				            <td>SOSC</td>
+				            <td>Male</td>
+				        </tr>
+				        <tr>
+				            <td>Raguvanj</td>
+				            <td>Hilton</td>
+				            <td>Dennis</td>
+				            <td>Computer Science</td>
+				            <td>SOSC</td>
+				            <td>Male</td>
+				        </tr>
+				        <tr>
+				            <td>Raguvanj</td>
+				            <td>Hilton</td>
+				            <td>Dennis</td>
+				            <td>Computer Science</td>
+				            <td>SOSC</td>
+				            <td>Male</td>
+				        </tr>
+				        
+				        </tbody>
+				    </table>
+	            </div>				
+			</div>
+		</div>
+		
+	</form>
+}

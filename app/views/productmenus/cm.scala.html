@@ -1,0 +1,65 @@
+@(userForm: Form[Customer])(username: String)
+
+@import helper._
+
+@main("Customer Maintenance", username){
+	
+	<form>
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1">
+				<h3>Customer Maintenance Menu</h3>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="funccode">Function Code</label>
+	                <select class="form-control" name="funcCode" value="A">
+	                	<option value="A">Add</option>
+	                	<option value="I">Inquire</option>
+	                	<option value="M">Modify</option>
+	                	<option value="D">Delete</option>
+	                	<option value="V">Verify</option>
+	                </select>
+	            </div>
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="bvn">BVN</label>
+	                <input class="form-control" type="number" name="bvn" required maxlength="20"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="name">Customer Name</label>
+	                <input class="form-control" type="text" name="name" required maxlength="20"/>
+	            </div>				
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="address">Address</label>
+	                <input class="form-control" type="text" name="address" required maxlength="100"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="name">Phone</label>
+	                <input class="form-control" type="number" name="phone" required maxlength="20"/>
+	            </div>				
+	            <input type="submit" class="btn primary">
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+					<label for="dob">Date of Birth</label>
+					<input class="form-control" type="date" name="dob" />
+	            </div>
+			</div>
+		</div>
+		
+	</form>
+}

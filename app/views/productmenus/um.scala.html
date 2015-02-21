@@ -1,0 +1,67 @@
+@(userForm: Form[User])
+
+@import helper._
+
+@main("User Maintenance", "chigozirim"){
+	
+	<form>
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1">
+				<h3>User Maintenance Menu</h3>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="funccode">Function Code</label>
+	                <select class="form-control" name="funcCode" value="A">
+	                	<option value="A">Add</option>
+	                	<option value="I">Inquire</option>
+	                	<option value="M">Modify</option>
+	                	<option value="D">Delete</option>
+	                	<option value="V">Verify</option>
+	                </select>
+	            </div>
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="username">User Name</label>
+	                <input class="form-control" type="text" name="username" required maxlength="20"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="password">Password</label>
+	                <input class="form-control" type="password" name="password" required maxlength="20"/>
+	            </div>				
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="confirm">Confirm Password</label>
+	                <input class="form-control" type="password" name="confirm" required maxlength="20"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="role">Role</label>
+	                <select class="form-control" name="role">
+	                	<option value="010">Teller</option>
+	                	<option value="200">Business Manager</option>
+	                	<option value="999">Super</option>
+	                </select>
+	            </div>
+	            <input type="submit" class="btn primary">
+			</div>
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	            </div>
+			</div>
+		</div>
+		
+	</form>
+}

@@ -1,0 +1,91 @@
+@(username: String)
+
+@import helper._
+
+@main("Transaction Maintenance", username){
+	
+	<form>
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h3>Transaction Maintenance Menu</h3>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="funccode">Function Code</label>
+	                <select class="form-control" name="funcCode" value="A">
+	                	<option value="A">Add</option>
+	                </select>
+	            </div>
+			</div>
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="form-group">
+	                <label for="trantype">Transaction Type</label>
+	                <select class="form-control" name="funcCode" value="A">
+	                	<option value="CNR">Cash - Normal Receipt</option>
+	                	<option value="CNP">Cash - Normal Payment</option>
+	                	<option value="TCI">Transfer - Customer Induced</option>
+	                	<option value="TBI">Transfer - Bank Induced</option>
+	                </select>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<p class="text-right"><a><button class="btn btn-info">Add</button></a><br/>Record 1</p>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="accountno">Account No.</label>
+	                <input class="form-control" type="number" name="accountno" required maxlength="20"/>
+	            </div>				
+			</div>
+			<div class="col-lg-4 col-lg-offset-2">
+				<div class="form-group">
+	                <label for="parttrantype">Part Tran Type</label>
+					<select value="D" class="form-control" name="parttrantype">
+						<option value="D">Debit</option>
+						<option value="C">Credit</option>
+					</select>
+	            </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="amount">Amount</label>
+	                <input class="form-control" type="number" name="amount" required maxlength="20"/>
+	            </div>				
+			</div>
+			<div class="col-lg-4 col-lg-offset-2">
+				<div class="form-group">
+	                <label for="currency">Currency</label>
+					<input class="form-control" type="text" name="currency" required maxlength="3"/>
+	            </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-1">
+				<div class="form-group">
+	                <label for="tranparticulars">Transaction Particulars</label>
+	                <input class="form-control" type="text" name="tranparticulars" required maxlength="30"/>
+	            </div>	
+	            <input type="submit" class="btn primary">
+			</div>
+			<div class="col-lg-4 col-lg-offset-2">
+				<div class="form-group">
+	                <label for="valuedate">Value Date</label>
+					<input class="form-control" type="date" name="valuedate" required maxlength="3"/>
+	            </div>
+			</div>
+		
+		</div>
+		
+	</form>
+}

@@ -14,8 +14,9 @@ public class Account extends Model{
 	@Column(unique=true)
 	public String foracid;
 	
-	@Constraints.Required
 	public Customer customer;
+
+	@Constraints.Required
 	public String schmType;
 	public String schmCode;
 	
